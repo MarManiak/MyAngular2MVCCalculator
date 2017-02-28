@@ -1,0 +1,36 @@
+﻿<div class="CalculatorApp">
+    <h2>{{title}}</h2>
+    <div id="calcOutput">{{displayValue}}</div>
+    <table class="calculator">
+        <tr>
+            <td><button id="calcClearBtn" (click)="clearAll()">C</button></td>
+            <td><button [disabled]="true">()</button></td>
+            <td><button [disabled]="true">%</button></td>
+            <td><button (click)="handleOperator('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button (click)="handleNumberClick('7')">7</button></td>
+            <td><button (click)="handleNumberClick('8')">8</button></td>
+            <td><button (click)="handleNumberClick('9')">9</button></td>
+            <td><button (click)="handleOperator('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button (click)="handleNumberClick('4')">4</button></td>
+            <td><button (click)="handleNumberClick('5')">5</button></td>
+            <td><button (click)="handleNumberClick('6')">6</button></td>
+            <td><button (click)="handleOperator('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button (click)="handleNumberClick('1')">1</button></td>
+            <td><button (click)="handleNumberClick('2')">2</button></td>
+            <td><button (click)="handleNumberClick('3')">3</button></td>
+            <td><button (click)="handleOperator('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button [disabled]="true">+/-</button></td>
+            <td><button (click)="handleNumberClick('0')">0</button></td>
+            <td><button (click)="clickBtnDot()">.</button></td>
+            <td><button id="calcEqualBtn" (click)="handleOperator('=')">=</button></td>
+        </tr>
+    </table>
+</div>
